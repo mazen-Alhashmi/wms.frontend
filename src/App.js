@@ -20,7 +20,6 @@ function App() {
     return (
         <div className="app-container">
             {contextHolder}
-
             <Form
                 name="basic"
                 labelCol={{
@@ -83,6 +82,9 @@ function App() {
                         span: 16,
                     }}
                 >
+                    <Button type="primary" htmlType="submit">
+                        Submit
+                    </Button>
                     <Button type="primary" htmlType="submit">
                         Submit
                     </Button>
