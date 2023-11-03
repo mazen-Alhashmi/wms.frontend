@@ -85,9 +85,7 @@ function App() {
                     <Button type="primary" htmlType="submit">
                         Submit
                     </Button>
-                    <Button type="primary" htmlType="submit">
-                        Submit
-                    </Button>
+
                 </Form.Item>
             </Form>
         </div>
