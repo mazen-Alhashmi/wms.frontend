@@ -1,96 +1,30 @@
-import React from 'react';
-import {Button, Checkbox, Form, Input, message} from 'antd';
+import {Button, Divider, Form, Input, Typography} from "antd";
+import "./App.css";
+import React from "react";
+import { PhoneOutlined } from '@ant-design/icons';
+import {InstagramOutlined } from '@ant-design/icons';
 
-function App() {
-    const onFinish = (values) => {
-        console.log('Success:', values);
-        success()
-    };
-    const onFinishFailed = (errorInfo) => {
-        console.log('Failed:', errorInfo);
-    };
-    const success = () => {
-        messageApi.open({
-            type: 'success',
-            content: 'This is a success message',
-        });
-    };
-    const [messageApi, contextHolder] = message.useMessage();
 
-    return (
-        <div className="app-container">
-            {contextHolder}
-            <Form
-                name="basic"
-                labelCol={{
-                    span: 8,
-                }}
-                wrapperCol={{
-                    span: 16,
-                }}
-                style={{
-                    maxWidth: 600,
-                }}
-                initialValues={{
-                    remember: true,
-                }}
-                onFinish={onFinish}
-                onFinishFailed={onFinishFailed}
-                autoComplete="off"
-            >
 
-                <Form.Item
-                    label="Username"
-                    name="username"
-                    rules={[
-                        {
-                            required: true,
-                            message: 'Please input your username!',
-                        },
-                    ]}
-                >
-                    <Input/>
-                </Form.Item>
-
-                <Form.Item
-                    label="Password"
-                    name="password"
-                    rules={[
-                        {
-                            required: true,
-                            message: 'Please input your password!',
-                        },
-                    ]}
-                >
-                    <Input.Password/>
-                </Form.Item>
-
-                <Form.Item
-                    name="remember"
-                    valuePropName="checked"
-                    wrapperCol={{
-                        offset: 8,
-                        span: 16,
-                    }}
-                >
-                    <Checkbox>Remember me</Checkbox>
-                </Form.Item>
-
-                <Form.Item
-                    wrapperCol={{
-                        offset: 8,
-                        span: 16,
-                    }}
-                >
-                    <Button type="primary" htmlType="submit">
-                        Submit
-                    </Button>
-
-                </Form.Item>
-            </Form>
+function App(){
+    return <div className="AppBG">
+    <Form className="LoginForm">
+        <div className="welcome">
+            <Typography>Welcome To AMGTC ! </Typography>
         </div>
-
-    )
+        <Form.Item label='Email' name = {'MyEmail'}>
+            <Input placeholder = "Enter ur Email "/>
+        </Form.Item>
+        <Form.Item label='Password' name = {'MyPassWord'}>
+            <Input placeholder = "Enter ur Password "/>
+        </Form.Item>
+        <Button type="primary" htmlType="submit" block>Login</Button>
+        <Divider style={{borderColor:"Black"}}>Connecting To Us </Divider>
+        <div>
+            <PhoneOutlined /> 41006001
+            <InstagramOutlined /> AMGTC
+        </div>
+    </Form>
+    </div>
 }
-
-export default App;
+export default App
