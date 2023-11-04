@@ -9,14 +9,14 @@ import {InstagramOutlined } from '@ant-design/icons';
 function App(){
     return <div className="AppBG">
     <Form className="LoginForm">
-        <div className="welcome">
-            <Typography>Welcome To AMGTC ! </Typography>
+        <div className="WelcomeText">
+            <p>Welcome To AMGTC</p>
         </div>
         <Form.Item label='Email' name = {'MyEmail'}>
             <Input placeholder = "Enter ur Email "/>
         </Form.Item>
         <Form.Item label='Password' name = {'MyPassWord'}>
-            <Input placeholder = "Enter ur Password "/>
+            <Input type = "password" placeholder = "Enter ur Password "/>
         </Form.Item>
         <Button type="primary" htmlType="submit" block>Login</Button>
         <Divider style={{borderColor:"Black"}}>Connecting To Us </Divider>
